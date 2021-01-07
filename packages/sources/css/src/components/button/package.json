@@ -4,6 +4,9 @@
   "scripts": {
     "build": "postcss src/index.css -o dist/index.css"
   },
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "@decathlon/vitamin-css-design-tokens": "^0.0.1"
   },
