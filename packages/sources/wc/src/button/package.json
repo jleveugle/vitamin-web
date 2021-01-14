@@ -16,7 +16,9 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
+    "dev": "chokidar \"../../../../../node_modules/@decathlon/vitamin-css-button/dist/*.css\" \"src/**\" -c \"stencil build\"",
+    "build:dev": "lerna exec --scope='@decathlon/vitamin-wc-button' --include-dependencies -- npm run build --if-present",
+    "start:dev": "yarn build:dev && lerna exec --parallel --scope='@decathlon/vitamin-wc-button' --include-dependencies -- npm run dev --if-present",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
@@ -27,9 +29,10 @@
   "devDependencies": {
     "@decathlon/vitamin-css-button": "^0.0.1",
     "@stencil/postcss": "^2.0.0",
-    "@types/autoprefixer": "^9.7.2",
-    "autoprefixer": "^10.2.0",
-    "postcss-import": "^14.0.0"
+    "@stencil/react-output-target": "^0.0.9",
+    "@stencil/svelte-output-target": "^0.0.3",
+    "svelte": "^3.31.2",
+    "chokidar-cli": "^2.1.0"
   },
   "license": "MIT"
 }

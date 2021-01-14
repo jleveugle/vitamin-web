@@ -1,0 +1,13 @@
+{
+  "name": "@decathlon/vitamin-svelte-button",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "build": "lerna exec --scope='@decathlon/vitamin-wc-button' --include-dependencies -- npm run build --if-present"
+  },
+  "dependencies": {
+    "@decathlon/vitamin-wc-button": "^0.0.1",
+    "svelte": "3.28.0"
+  },
+  "main": "dist/index.ts"
+}

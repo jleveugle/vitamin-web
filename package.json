@@ -15,7 +15,13 @@
   },
   "license": "Apache-2.0",
   "workspaces": [
-    "packages/**"
+    "packages/showcases/*",
+    "packages/sources/*",
+    "packages/sources/css/src/components/*",
+    "packages/sources/css/src/shared/*",
+    "packages/sources/react/src/*",
+    "packages/sources/svelte/src/*",
+    "packages/sources/wc/src/*"
   ],
   "scripts": {
     "build": "lerna run build",

@@ -1,4 +1,4 @@
-import '@decathlon/vitamin-css';
+import '@decathlon/vitamin-css-button';
 
 export default {
   parameters: {
